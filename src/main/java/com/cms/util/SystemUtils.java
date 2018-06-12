@@ -131,7 +131,7 @@ public final class SystemUtils {
 		if (cacheElement == null) {
 			Config config = new Config();
 			try {
-				File configXmlFile = new File(PathKit.getRootClassPath()+CommonAttribute.CONFIG_XML_PATH);
+				File configXmlFile = new File(PathKit.getWebRootPath()+CommonAttribute.CONFIG_XML_PATH);//getRootClassPath
 				Document document = new SAXReader().read(configXmlFile);
 				List<org.dom4j.Element> elements = document.selectNodes("/kuaifan/config");
 				for (org.dom4j.Element element : elements) {

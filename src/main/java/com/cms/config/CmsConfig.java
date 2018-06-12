@@ -19,6 +19,7 @@ import com.jfinal.core.JFinal;
 import com.jfinal.ext.handler.ContextPathHandler;
 import com.jfinal.ext.interceptor.SessionInViewInterceptor;
 import com.jfinal.json.FastJsonFactory;
+import com.jfinal.kit.PathKit;
 import com.jfinal.kit.PropKit;
 import com.jfinal.kit.StrKit;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
@@ -47,16 +48,19 @@ public class CmsConfig extends JFinalConfig{
         /**
          * 特别注意：Eclipse 之下建议的启动方式
          */
-        JFinal.start("src/main/webapp", 8888, "/", 5);
+//        JFinal.start("src/main/webapp", 8888, "/", 5);
         
         /**
          * 特别注意：IDEA 之下建议的启动方式，仅比 eclipse 之下少了最后一个参数
          */
-        // JFinal.start("src/main/webapp", 80, "/");
+         JFinal.start("src/main/webapp", 80, "/");
     }
 	
 	@Override
 	public void configConstant(Constants me) {
+    	PathKit.setRootClassPath(PathKit.getWebRootPath()+"/WEB-INF/classes/");
+		String a = PathKit.getRootClassPath();
+		System.out.println("---------------------------"+PathKit.getRootClassPath());
 		// TODO Auto-generated method stub
 	    PropKit.use(CommonAttribute.CONFIG_PROPERTIES);
 		/** 开发者模式 */

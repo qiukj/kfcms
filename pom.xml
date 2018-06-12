@@ -174,7 +174,7 @@
 		</dependency>
   </dependencies>	
   <build>
-    <finalName>kuaifanjfinalcms</finalName>
+    <finalName>kuaifanjfinalcms.war</finalName>
     <plugins>
        <plugin>
            <groupId>org.apache.maven.plugins</groupId>

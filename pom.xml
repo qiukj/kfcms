@@ -13,6 +13,7 @@
     <jfinal.version>3.3</jfinal.version>
     <cos.version>2017.5</cos.version>
     <jetty-server.version>8.1.8</jetty-server.version>
+    <version.org.jboss.spec.javax.websocket>1.0.0.Final</version.org.jboss.spec.javax.websocket>
   </properties>
 
     <!-- 使用阿里 maven 库 -->
@@ -174,6 +175,12 @@
 		    <artifactId>jsoup</artifactId>
 		    <version>1.11.2</version>
 		</dependency>
+	  <dependency>
+		  <groupId>org.jboss.spec.javax.websocket</groupId>
+		  <artifactId>jboss-websocket-api_1.0_spec</artifactId>
+		  <version>${version.org.jboss.spec.javax.websocket}</version>
+		  <scope>provided</scope>
+	  </dependency>
   </dependencies>
 
 

@@ -13,7 +13,7 @@
     <jfinal.version>3.3</jfinal.version>
     <cos.version>2017.5</cos.version>
     <jetty-server.version>8.1.8</jetty-server.version>
-    <version.org.jboss.spec.javax.websocket>1.0.0.Final</version.org.jboss.spec.javax.websocket>
+	  <spring.bom_version>3.2.17.RELEASE</spring.bom_version>
   </properties>
 
     <!-- 使用阿里 maven 库 -->
@@ -175,12 +175,38 @@
 		    <artifactId>jsoup</artifactId>
 		    <version>1.11.2</version>
 		</dependency>
+	  <!--处理jboss 找不到com/alibaba/druid/support/spring/stat/DruidStatInterceptor-->
 	  <dependency>
-		  <groupId>org.jboss.spec.javax.websocket</groupId>
-		  <artifactId>jboss-websocket-api_1.0_spec</artifactId>
-		  <version>${version.org.jboss.spec.javax.websocket}</version>
-		  <scope>provided</scope>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-core</artifactId>
+		  <version>${spring.bom_version}</version>
 	  </dependency>
+	  <dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-context</artifactId>
+		  <version>${spring.bom_version}</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-context-support</artifactId>
+		  <version>${spring.bom_version}</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-jdbc</artifactId>
+		  <version>${spring.bom_version}</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-tx</artifactId>
+		  <version>${spring.bom_version}</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-expression</artifactId>
+		  <version>${spring.bom_version}</version>
+	  </dependency>
+	  <!--  -->
   </dependencies>
 
 

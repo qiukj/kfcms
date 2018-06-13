@@ -39,9 +39,9 @@ import net.sf.ehcache.Element;
 
 /**
  * Utils - 系统
- * 
- * 
- * 
+ *
+ *
+ *
  */
 public final class SystemUtils {
 
@@ -120,7 +120,7 @@ public final class SystemUtils {
 
 	/**
 	 * 获取系统设置
-	 * 
+	 *
 	 * @return 系统设置
 	 */
 	@SuppressWarnings("unchecked")
@@ -131,7 +131,7 @@ public final class SystemUtils {
 		if (cacheElement == null) {
 			Config config = new Config();
 			try {
-				File configXmlFile = new File(PathKit.getWebRootPath()+CommonAttribute.CONFIG_XML_PATH);//getRootClassPath
+				File configXmlFile = new File(PathKit.getRootClassPath()+CommonAttribute.CONFIG_XML_PATH);
 				Document document = new SAXReader().read(configXmlFile);
 				List<org.dom4j.Element> elements = document.selectNodes("/kuaifan/config");
 				for (org.dom4j.Element element : elements) {
@@ -156,7 +156,7 @@ public final class SystemUtils {
 
 	/**
 	 * 设置系统设置
-	 * 
+	 *
 	 * @param config
 	 *            系统设置
 	 */
@@ -216,7 +216,7 @@ public final class SystemUtils {
 
 	/**
 	 * 获取所有主题
-	 * 
+	 *
 	 * @return 所有主题
 	 */
 	public static List<String> getThemes(){

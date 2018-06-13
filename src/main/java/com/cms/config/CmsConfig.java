@@ -1,5 +1,6 @@
 package com.cms.config;
 
+import java.io.File;
 import java.util.List;
 
 import com.cms.ClassScaner;
@@ -58,9 +59,13 @@ public class CmsConfig extends JFinalConfig{
 	
 	@Override
 	public void configConstant(Constants me) {
-    	PathKit.setRootClassPath(PathKit.getWebRootPath()+"/WEB-INF/classes/");
-		String a = PathKit.getRootClassPath();
-		System.out.println("---------------------------"+PathKit.getRootClassPath());
+//    	PathKit.setWebRootPath("D:\\qqq\\workProject\\kfcms\\target\\kuaifanjfinalcms\\");
+//    	String c = this.getClass().getClassLoader().getResource("/").getPath();
+//    	String b = PathKit.getWebRootPath();
+//    	String p = PathKit.getWebRootPath()+ File.separator+"WEB-INF"+File.separator+"classes"+File.separator;
+//    	PathKit.setRootClassPath(p);
+//		String a = PathKit.getRootClassPath();
+//		System.out.println("---------------------------"+PathKit.getRootClassPath());
 		// TODO Auto-generated method stub
 	    PropKit.use(CommonAttribute.CONFIG_PROPERTIES);
 		/** 开发者模式 */
